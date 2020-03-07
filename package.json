@@ -1,12 +1,12 @@
 {
-  "name": "typescript-test-npm",
+  "name": "robot",
   "version": "1.0.0",
   "description": "A very simple Typescript project",
   "author": "Jenny Ough",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nea/Typescript-Test"
+    "url": "https://github.com/jennyoughibm/robot"
   },
   "keywords": [
     "npm",

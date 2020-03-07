@@ -1,16 +1,15 @@
 # Typescript Test
-A very simple Typescript Project based on npm.
+A very simple Typescript Project.
 
 
 # Getting started
-First clone this repository
+First clone this repository, then install dependencies
 
 ```
 npm install
 ```
   
 ## Usage
-Start developing in the **src/** directory. The structure will be preserved and all files and compilations are copied to the output directory **bin/**.
 
 To start a local server and watch the *bin/* directory just call
 ```
