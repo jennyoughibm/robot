@@ -20,7 +20,9 @@ describe('movements', function() {
         const move = new movement('0', '0', 'FRFRFFFFFFFLLLLFFFFFRFFFFLFFLRRF');
         const result:Pos = moveToDest(move);
         expect(result.x===21);
-        expect(result.y===-1);
+        expect(result.y===0);
+        expect(result.z===1);
+        expect(result.facing === Direction.N)
     });
 
     it('test data 2 - destination (4, 19)', function() {

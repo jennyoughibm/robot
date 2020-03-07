@@ -117,12 +117,24 @@ export const moveToDest = (startMove : Movement) : Pos =>{
         }
     });
 
-    const destX : number = parseInt(startMove.startX) + variantHorizontal;
-    const destY : number = parseInt(startMove.startY) + variantVertical;
+    let destX : number = parseInt(startMove.startX) + variantHorizontal;
+    let destY : number = parseInt(startMove.startY) + variantVertical;
+    let destZ : number = 0;
+
+    if (destX < 0){
+        destX = 0;
+        destZ = destX * (-1);
+    }
+
+    if (destY < 0){
+        destY = 0;
+        destZ = destY * (-1);
+    }
 
     const robotpos : Pos = {
         x: destX,
         y: destY,
+        z: destZ,
         facing: currentpos
     };
 
