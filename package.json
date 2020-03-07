@@ -8,20 +8,6 @@
     "type": "git",
     "url": "https://github.com/jennyoughibm/robot"
   },
-  "keywords": [
-    "npm",
-    "scripts",
-    "watch",
-    "typescript",
-    "tsc"
-  ],
-  "scripts": {
-    "start": "run-s watch",
-    "build": "run-s build:*",
-    "build:tsc": "tsc",
-    "watch:tsc": "tsc -w",
-    "watch": "run-p serve watch:*"
-  },
   "devDependencies": {
     "@types/jest": "^25.1.3",
     "browser-sync": "^2.18.0",
