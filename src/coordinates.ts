@@ -61,27 +61,22 @@ export const moveToDest = (startMove : Movement) : Pos =>{
             switch(currentpos) {
                 case Direction.N: {
                     currentpos = Direction.W;
-                    variantHorizontal = variantHorizontal -1;
                     break;
                 }
                 case Direction.S: {
                     currentpos = Direction.E;
-                    variantHorizontal = variantHorizontal +1;
                     break;
                 }
                 case Direction.E: {
                     currentpos = Direction.S;
-                    variantVertical = variantVertical -1;
                     break;
                 }
                 case Direction.W: {
                     currentpos = Direction.N;
-                    variantVertical = variantVertical +1;
                     break;
                 }
                 default: {
                     currentpos = Direction.W;
-                    variantHorizontal = variantHorizontal -1;
                     break;
                 }
             }
@@ -90,27 +85,22 @@ export const moveToDest = (startMove : Movement) : Pos =>{
             switch(currentpos) {
                 case Direction.N: {
                     currentpos = Direction.E;
-                    variantHorizontal = variantHorizontal +1;
                     break;
                 }
                 case Direction.S: {
                     currentpos = Direction.W;
-                    variantHorizontal = variantHorizontal -1;
                     break;
                 }
                 case Direction.E: {
                     currentpos = Direction.N;
-                    variantVertical = variantVertical +1;
                     break;
                 }
                 case Direction.W: {
                     currentpos = Direction.S;
-                    variantVertical = variantVertical -1;
                     break;
                 }
                 default: {
                     currentpos = Direction.E;
-                    variantHorizontal = variantHorizontal +1;
                     break;
                 }
             }
@@ -122,13 +112,12 @@ export const moveToDest = (startMove : Movement) : Pos =>{
     let destZ : number = 0;
 
     if (destX < 0){
-        destX = 0;
         destZ = destX * (-1);
+        destX = 0;
     }
 
     if (destY < 0){
         destY = 0;
-        destZ = destY * (-1);
     }
 
     const robotpos : Pos = {

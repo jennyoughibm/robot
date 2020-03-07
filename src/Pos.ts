@@ -8,6 +8,6 @@ export interface Pos {
 export enum Direction {
     N = 'FORWARD UP',
     S = 'BACK DOWN',
-    E = 'TURN LEFT',
-    W = 'TURN RIGHT'
+    W = 'TURN LEFT',
+    E = 'TURN RIGHT'
 };

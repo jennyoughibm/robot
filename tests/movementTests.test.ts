@@ -7,35 +7,39 @@ describe('movements', function() {
     it('basic horizontal move', function() {
         const move = new movement("0", "0", "FFBB");
         const result : Pos = moveToDest(move);
-        expect(result.x===0);
+        expect(result.x).toBe(0);
     });
 
     it('basic vertical movement', function() {
         const move = new movement('0', '0', 'LLRR');
         const result:Pos = moveToDest(move);
-        expect(result.facing===Direction.N);
+        expect(result.facing).toBe(Direction.N);
     });
 
-    it('test data 1 - destination (-1, 21)', function() {
+    it('test data 1 - destination (0, 11, 6), facing East', function() {
         const move = new movement('0', '0', 'FRFRFFFFFFFLLLLFFFFFRFFFFLFFLRRF');
         const result:Pos = moveToDest(move);
-        expect(result.x===21);
-        expect(result.y===0);
-        expect(result.z===1);
-        expect(result.facing === Direction.N)
+        expect(result.x).toBe(0);
+        expect(result.y).toBe(11);
+        expect(result.z).toBe(6);
+        expect(result.facing).toBe( Direction.E)
     });
 
-    it('test data 2 - destination (4, 19)', function() {
+    it('test data 2 - destination (0,12,4) facing East', function() {
         const move = new movement('3', '6', 'FFFFFFFFRRRRRRRFFFFLLLBBRRRRRLLLLLLLLLRFFF');
         const result :Pos= moveToDest(move);
-        expect(result.x===19);
-        expect(result.y===4);
+        expect(result.x).toBe(0);
+        expect(result.y).toBe(12);
+        expect(result.z).toBe(4);
+        expect(result.facing).toBe( Direction.E)
     });
 
-    it('test data 3 - destination (3, 15)', function() {
+    it('test data 3 - destination (0,18,7) facing West', function() {
         const move = new movement('0', '7', 'RRRRRRRRFFFFFFFFFFFLLLBBBBBRRRLLLLLFFLR');
         const result: Pos = moveToDest(move);
-        expect(result.x===15);
-        expect(result.y ===3);
+        expect(result.x).toBe(0);
+        expect(result.y ).toBe(18);
+        expect(result.z).toBe(7);
+        expect(result.facing).toBe( Direction.W)
     });
 });
